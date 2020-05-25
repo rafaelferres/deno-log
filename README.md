@@ -4,7 +4,7 @@
 ## Usage
 >This module need --allow-read --allow-write --allow-run
 
-    import  {  DenoLog  }  from  './mod.ts';
+    import  {  DenoLog  }  from  'https://deno.land/x/deno_log/mod.ts';
     
     var logger  =  new  DenoLog(options);
     
