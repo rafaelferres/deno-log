@@ -52,7 +52,7 @@ export class DenoLog {
     private async saveToFile(msg: string){
         try{
             let pathToLogFile = this.options.path ? this.options.path : Deno.cwd();
-            let pathToLogFileNormalized = path.normalize(pathToLogFile + "\\");
+            let pathToLogFileNormalized = path.normalize(pathToLogFile + path.sep);
             let pathInfos = await Deno.lstatSync(pathToLogFileNormalized);
 
             if(this.options.prefix && await this.checkAlphaNumeric(this.options.prefix) == false) throw Error("Please input alphanumeric characters only in prefix")
